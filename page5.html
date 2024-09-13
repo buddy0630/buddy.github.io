@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Fancy Scrolling 3D Website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 * {
     margin: 0;
@@ -145,3 +152,63 @@ footer p {
         padding: 0 10px; /* Less padding for smaller screens */
     }
 }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Section 1 -->
+    <section id="section1">
+        <div class="parallax"></div>
+        <h1>Scroll Into the Future</h1>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="section2">
+        <div class="parallax parallax-second"></div>
+        <div class="box">
+            <h1>Welcome to 3D World</h1>
+            <p>We design cutting-edge websites that respond to your every move. Ready to elevate your online presence?</p>
+            <a href="#section3" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="section3">
+        <h1>It Gets Even Cooler</h1>
+        <div class="box">
+            <p>Scroll, experience, and feel the future of web design. Our 3D transformations and parallax effects bring life to your screen.</p>
+        </div>
+    </section>
+
+    <!-- Section 4 (New) -->
+    <section id="section4">
+        <h1>Extra Long Section</h1>
+        <div class="box">
+            <p>This section adds more content to make the site longer. Use this space to provide additional information or showcase more of your work.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Ultra Mega Fancy Web Co. | Contact us at <a href="mailto:info@fancyweb.com" style="color: #ff6b6b;">info@fancyweb.com</a></p>
+    </footer>
+
+    <script>
+        // Scroll Animation Trigger
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const triggerPoint = window.innerHeight / 1.2;
+                if (sectionTop < triggerPoint) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
